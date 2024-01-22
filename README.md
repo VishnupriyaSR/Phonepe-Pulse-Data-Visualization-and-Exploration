@@ -9,19 +9,19 @@ The PhonePe Pulse website showcases more than 2000+ Crore transactions by consum
 
 **Required Libraries**
 
-Plotly - (To plot and visualize the data)
+Plotly - To plot and visualize the data
 
-Pandas - (To Create a DataFrame with the scraped data)
+Pandas - To Create a DataFrame with the scraped data
 
-Psycopg2 - (To store and retrieve the data)
+Psycopg2 - To store and retrieve the data
 
-Streamlit - (To Create Graphical user Interface)
+Streamlit - To Create Graphical user Interface
 
-json - (To load the json files)
+json - To load the json files
 
-git.repo.base - (To clone the GitHub repository)
+git.repo.base - To clone the GitHub repository
 
-**Steps:**
+**Procedure:**
 
 **Step 1:**
 
@@ -115,9 +115,9 @@ cursor=mydb.cursor()
         # the connection is not auto committed by default, so we must commit to save our changes
         mydb.commit()
 
-**Step 5: **
+**Step 5:**
 
-**Dashboard creation: **
+**Dashboard creation:**
 
 Use the Streamlit and Plotly libraries in Python to create an interactive and visually appealing dashboard. Plotly's built-in geo map functions can be used to display the data on a map and Streamlit can be used to create a user-friendly interface with multiple dropdown options for users to select different facts and figures to display.
 
