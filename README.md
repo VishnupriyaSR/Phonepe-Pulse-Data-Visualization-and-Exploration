@@ -106,11 +106,23 @@ cursor=mydb.cursor()
 
 **Create tables**
 
-   mycursor.execute("create table 'Table name' (col1 varchar(100), col2 int, col3 int, col4 varchar(100), col5 int, col6 double)")
+   cursor.execute("create table 'Table name' (col1 varchar(100), col2 int, col3 int, col4 varchar(100), col5 int, col6 double)")
 
     for i,row in df.iterrows():
-        sql = "INSERT INTO agg_trans VALUES (%s,%s,%s,%s,%s,%s)"
-        mycursor.execute(sql, tuple(row))
+        query = "INSERT INTO agg_trans VALUES (%s,%s,%s,%s,%s,%s)"
+        cursor.execute(query, tuple(row))
         
         # the connection is not auto committed by default, so we must commit to save our changes
         mydb.commit()
+
+**Step 5: **
+
+**Dashboard creation: **
+
+Use the Streamlit and Plotly libraries in Python to create an interactive and visually appealing dashboard. Plotly's built-in geo map functions can be used to display the data on a map and Streamlit can be used to create a user-friendly interface with multiple dropdown options for users to select different facts and figures to display.
+
+**Step 6:**
+
+**Data retrieval**: 
+
+Use the "psycopg2" library to connect to the Postgre-SQL database and fetch the data into a Pandas dataframe. Use the data in the dataframe to update the dashboard dynamically.
