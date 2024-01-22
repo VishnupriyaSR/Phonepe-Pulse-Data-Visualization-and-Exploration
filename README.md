@@ -59,7 +59,7 @@ This step may include cleaning the data, handling missing values, and transformi
 path1 = "Path of the JSON files"
 agg_trans_list = os.listdir(path1)
 
-**Column names**
+#Column names
 
 columns1 = {'State': [], 'Year': [], 'Quarter': [], 'Transaction_type': [], 'Transaction_count': [],'Transaction_amount': []}
 
@@ -99,3 +99,18 @@ df.to_csv('filename.csv',index=False)
 **Database insertion:**
 
 Use the "psycopg2" library in Python to connect to a Postgre-SQL database and insert the transformed data using SQL commands.
+
+#Connect to the POSTgre-SQL Server
+mydb=psycopg2.connect(host="localhost",user="postgres",password="vishnu",database="Phonepe",port=5432)
+cursor=mydb.cursor()
+
+**Create tables**
+
+   mycursor.execute("create table 'Table name' (col1 varchar(100), col2 int, col3 int, col4 varchar(100), col5 int, col6 double)")
+
+    for i,row in df.iterrows():
+        sql = "INSERT INTO agg_trans VALUES (%s,%s,%s,%s,%s,%s)"
+        mycursor.execute(sql, tuple(row))
+        
+        # the connection is not auto committed by default, so we must commit to save our changes
+        mydb.commit()
