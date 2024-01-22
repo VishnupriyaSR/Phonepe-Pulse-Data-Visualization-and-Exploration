@@ -27,19 +27,19 @@ git.repo.base - To clone the GitHub repository
 
 **Importing the Libraries:**
 
-    !pip install ["Name of the library"]
+        !pip install ["Name of the library"]
     
 If the libraries are already installed then we have to import those into our script by mentioning the below codes.
 
-    import pandas as pd
-    import psycopg2 as pg
-    import streamlit as st
-    import plotly.express as px
-    import os
-    import json
-    from streamlit_option_menu import option_menu
-    from PIL import Image
-    from git.repo.base import Repo
+        import pandas as pd
+        import psycopg2 as pg
+        import streamlit as st
+        import plotly.express as px
+        import os
+        import json
+        from streamlit_option_menu import option_menu
+        from PIL import Image
+        from git.repo.base import Repo
 
 **Step 2:**
 
@@ -56,12 +56,12 @@ Clone the Github using scripting to fetch the data from the Phonepe pulse Github
 
 This step may include cleaning the data, handling missing values, and transforming the data into a format suitable for analysis and visualization.
 
-path1 = "Path of the JSON files"
-agg_trans_list = os.listdir(path1)
+    path1 = "Path of the JSON files"
+    agg_trans_list = os.listdir(path1)
 
 #Column names
 
-columns1 = {'State': [], 'Year': [], 'Quarter': [], 'Transaction_type': [], 'Transaction_count': [],'Transaction_amount': []}
+    columns1 = {'State': [], 'Year': [], 'Quarter': [], 'Transaction_type': [], 'Transaction_count': [],'Transaction_amount': []}
 
 Looping through each and every folder and opening the json files appending only the required key and values and creating the dataframe.
 
