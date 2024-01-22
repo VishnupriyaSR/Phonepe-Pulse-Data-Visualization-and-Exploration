@@ -21,11 +21,11 @@ json - (To load the json files)
 
 git.repo.base - (To clone the GitHub repository)
 
-**Steps:
+**Steps:**
 
-Step 1:
+**Step 1:**
 
-Importing the Libraries:**
+**Importing the Libraries:**
 
     !pip install ["Name of the library"]
     
@@ -41,18 +41,18 @@ If the libraries are already installed then we have to import those into our scr
     from PIL import Image
     from git.repo.base import Repo
 
-**Step 2:
+**Step 2:**
 
-Data extraction:**
+**Data extraction:**
 
 Clone the Github using scripting to fetch the data from the Phonepe pulse Github repository and store it in a suitable format such as JSON. Use the below syntax to clone the phonepe github repository into your local drive.
 
     from git.repo.base import Repo
     Repo.clone_from("GitHub Clone URL","Path to get the cloded files")
 
-**Step 3:
+**Step 3:**
 
-Data transformation:**
+**Data transformation:**
 
 This step may include cleaning the data, handling missing values, and transforming the data into a format suitable for analysis and visualization.
 
@@ -94,8 +94,8 @@ df = pd.DataFrame(columns1)
 
 df.to_csv('filename.csv',index=False)
 
-**Step 4:
+**Step 4:**
 
-Database insertion:**
+**Database insertion:**
 
 Use the "psycopg2" library in Python to connect to a Postgre-SQL database and insert the transformed data using SQL commands.
