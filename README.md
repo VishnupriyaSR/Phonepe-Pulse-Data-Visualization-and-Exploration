@@ -90,7 +90,7 @@ for state in agg_trans_list:
                 columns1['Quarter'].append(int(file.strip('.json')))
 df = pd.DataFrame(columns1)
 
-**Converting the dataframe into csv file**
+#Converting the dataframe into csv file
 
 df.to_csv('filename.csv',index=False)
 
@@ -104,7 +104,7 @@ Use the "psycopg2" library in Python to connect to a Postgre-SQL database and in
 mydb=psycopg2.connect(host="localhost",user="postgres",password="vishnu",database="Phonepe",port=5432)
 cursor=mydb.cursor()
 
-**Create tables**
+#Create tables
 
    cursor.execute("create table 'Table name' (col1 varchar(100), col2 int, col3 int, col4 varchar(100), col5 int, col6 double)")
 
